@@ -1,0 +1,86 @@
+.publications {
+  background-color: $bg-color;
+  padding-top: 30px;
+
+  .container {
+    padding: 0 30px 30px 30px;
+    @media screen and (min-width: 768px) {
+      padding: 0 60px 30px 60px;
+    }
+  }
+  .cat-link {
+    margin-bottom: 5px;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      @include flex-spacing-div(2, 30px);
+      align-items: stretch;
+      flex-direction: row;
+      .publications__content:nth-child(3) {
+        width: 100%;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      @include flex-spacing-div(3, 30px);
+      flex-direction: row;
+      .publications__content:nth-child(3) {
+        width: calc((100% - 2 * 30px) / 3);
+      }
+    }
+  }
+  &__wrapper {
+    padding: 30px;
+    background-color: $main-text-color;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+    @media screen and (min-width: 768px) {
+      flex: 1;
+    }
+  }
+  &__title {
+    font-size: $h2-size;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 100%;
+    @include gradient-text;
+  }
+  &__content {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-title {
+      line-height: 100%;
+      font-weight: bold;
+      color: $active-regular-color;
+    }
+    &-time {
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 100%;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $second-text-color;
+    }
+    &-text {
+      font-size: 14px;
+      line-height: 22px;
+      color: #000000;
+    }
+  }
+  img {
+    border-radius: 8px 8px 0 0;
+    display: block;
+    object-fit: contain;
+  }
+  .underline {
+    border-bottom: 4px solid $separator-color;
+    width: 100%;
+  }
+}

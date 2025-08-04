@@ -1,0 +1,92 @@
+body {
+  font-family: $base-ff;
+  font-size: $base-fs;
+  line-height: $base-lh;
+}
+.wrapper {
+  min-width: 375px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media screen and (min-width: 768px) {
+    padding: 0 30px;
+  }
+}
+
+.bg-gradient {
+  position: relative;
+  background: $supersoft-gradient;
+  color: $main-text-color;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 54px;
+  padding-bottom: 60px;
+  & .services {
+    padding: 134px 0 60px;
+    @media screen and (min-width: 768px) {
+      padding-top: 280px;
+    }
+    @media screen and (min-width: 1024px) {
+      padding-top: 176px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 84px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    height: 12px;
+    right: 20px;
+    left: 20px;
+    background: #cacadb;
+    border-radius: inherit;
+  }
+  &::after {
+    bottom: -24px;
+    left: 40px;
+    right: 40px;
+    background: #e7e7f2;
+  }
+}
+.text-gradient {
+  color: transparent;
+  background: $text-gradient;
+  background-clip: text;
+}
+.cat-link {
+  color: $active-regular-color;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 100%;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &::after {
+    content: "";
+    border: 2px solid currentColor;
+    width: 5px;
+    height: 5px;
+    border-width: 2px 2px 0 0;
+    display: inline-block;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -10px;
+    top: 5px;
+  }
+  @media screen and (min-width: 1024px) {
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}

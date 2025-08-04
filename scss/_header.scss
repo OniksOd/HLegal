@@ -1,0 +1,249 @@
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: $main-text-color;
+  @media screen and (min-width: 768px) {
+    padding: 50px 30px 0 50px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 50px 30px 0 340px;
+  }
+
+  &__logo {
+    display: flex;
+    img {
+      max-width: 69px;
+      @media screen and (min-width: 768px) {
+        max-width: 130px;
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: 1024px) {
+        max-width: 130px;
+        position: absolute;
+        left: 60px;
+        top: 50px;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+  &__page {
+    display: none;
+  }
+  &__page-active {
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 400;
+    display: block;
+
+    &::before {
+      display: inline-block;
+      content: "/";
+      color: $accent-color;
+      font-weight: bold;
+      line-height: 1;
+      margin: 0 5px;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 36px;
+      &::before {
+        margin: 0 7px;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      position: absolute;
+      top: 54px;
+      left: 200px;
+    }
+  }
+  &__topline {
+    display: flex;
+    align-items: center;
+    background: #f5f5fa33;
+    order: -1;
+    padding: 10px 15px;
+    margin: 0 -15px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start;
+      background: none;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 30px;
+      > li + li {
+        position: relative;
+        padding-left: 18px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 6px;
+          height: 6px;
+          background-color: $separator-color;
+          border-radius: 50%;
+          left: 6px;
+          top: 10px;
+        }
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      justify-content: flex-end;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+  }
+
+  .langs {
+    display: flex;
+    font-weight: bold;
+    font-size: 12px;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 33px;
+      height: 25px;
+      @media screen and (min-width: 1024px) {
+        &:hover {
+          background-color: #ffffff33;
+          border-radius: 8px;
+        }
+      }
+    }
+    .active {
+      background-color: $accent-color;
+      border-radius: 8px;
+    }
+  }
+  address {
+    font-style: normal;
+    color: $second-text-color;
+  }
+}
+.nav {
+  &__menu-holder {
+    position: fixed;
+    background-color: $main-text-color;
+    bottom: 0;
+    right: 8px;
+    left: 8px;
+    transform: translateY(110%);
+    transition: transform 0.5s linear;
+    border-radius: 12px 12px 0 0;
+    padding-top: 64px;
+
+    .header.active & {
+      transform: translateY(0);
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 15px;
+      transform: translateY(0);
+      position: static;
+      background-color: inherit;
+      padding: 0;
+    }
+    @media screen and (min-width: 1024px) {
+      justify-content: flex-end;
+    }
+  }
+  &__menu {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 15px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      color: $active-regular-color;
+      background-color: $bg-color;
+      font-weight: bold;
+      font-size: 24px;
+      border-radius: 12px;
+      margin: 15px 12px;
+      position: relative;
+      @media screen and (min-width: 1024px) {
+        &:hover::before {
+          content: "";
+          border-bottom: 2px solid $main-text-color;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+    a.active {
+      color: $accent-color;
+      @media screen and (min-width: 768px) {
+        &::before {
+          content: "";
+          border-bottom: 2px solid $accent-color;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      a {
+        color: $main-text-color;
+        background-color: inherit;
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+  }
+
+  &__icon-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__burger {
+    position: absolute;
+    top: 57px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    .active & {
+      background-color: $separator-color;
+      border-radius: 8px;
+      color: black;
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+.mobile-hidden {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.phone {
+  font-weight: bold;
+}
+.facebook-icon {
+  fill: white;
+  &:hover {
+    fill: $accent-color;
+  }
+}
+.icon-Close {
+  stroke: rgba(236, 111, 93, 1);
+}

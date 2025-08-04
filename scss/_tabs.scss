@@ -1,0 +1,80 @@
+.tabs {
+  padding: 0 15px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 30px;
+  }
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    margin: 60px 0;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    font-size: $h2-size;
+    font-weight: bold;
+    overflow: auto;
+    margin: 30px 0;
+    text-align: right;
+
+    @media screen and (min-width: 768px) {
+      font-size: $h1-size;
+      line-height: 100%;
+    }
+    @media screen and (min-width: 1024px) {
+      flex-direction: column;
+      cursor: pointer;
+      width: 48%;
+      margin: 0;
+      padding: 15px 60px 15px 0;
+    }
+  }
+  &__item {
+    white-space: nowrap;
+    &.active {
+      @include gradient-text;
+    }
+  }
+  &__content {
+    border: solid rgba(255, 255, 255, 0.3);
+    border-width: 4px 0 0 0;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 52%;
+      border-width: 0 0 0 4px;
+      padding: 9px 0 9px 60px;
+      margin: 0;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      font-size: 32px;
+    }
+  }
+  &__text {
+    font-size: 19px;
+    line-height: 30px;
+  }
+}
+
+.tabs__content-text:not(.active) {
+  display: none;
+}
+.tabs__item:not(.active) {
+  color: $second-text-color;
+}
+@media screen and (min-width: 1024px) {
+  .tabs__item:hover {
+    color: $accent-color;
+  }
+}

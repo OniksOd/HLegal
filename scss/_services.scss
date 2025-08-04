@@ -1,0 +1,51 @@
+.services {
+  padding: 0 15px;
+  @media screen and (min-width: 768px) {
+    padding: 0 30px;
+  }
+
+  &__title-text {
+    font-size: $h2-size;
+    font-weight: bold;
+    line-height: 100%;
+    @include gradient-text;
+    margin: 10px 0 30px;
+    @media screen and (min-width: 768px) {
+      font-size: $h1-size;
+      margin-bottom: 60px;
+    }
+  }
+  &__item {
+    ul {
+      @include flex-spasing(1, 30px);
+      @media screen and (min-width: 768px) {
+        @include flex-spasing(2, 60px);
+      }
+      @media screen and (min-width: 1024px) {
+        @include flex-spasing(3, 60px);
+      }
+    }
+    h3 {
+      color: $active-regular-color;
+      font-size: $h3-size;
+      font-weight: bold;
+      line-height: 100%;
+      margin-bottom: 15px;
+      @media screen and (min-width: 1024px) {
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+.img-wrapper {
+  display: flex;
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  background-color: $main-text-color;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}

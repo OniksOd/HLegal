@@ -1,0 +1,46 @@
+$main-color: #323264;
+$alt-color: #46466e;
+$soft-color: #686887;
+$accent-color: #f0145a;
+$active-regular-color: #24a3ff;
+$active-hover-color: #0085ff;
+$active-color: #006ccf;
+$bg-color: #f5f5fa;
+$bg-alt-color: #ededf7;
+$main-text-color: #ffffff;
+$second-text-color: #b3b3ba;
+$separator-color: #e6e6f0;
+$main-gradient: linear-gradient(
+  128.63deg,
+  #323264 0%,
+  #323264 73.96%,
+  #a54b5f 100%
+);
+$soft-gradient: linear-gradient(
+  42.01deg,
+  #323264 14.33%,
+  #323264 51.39%,
+  #7a425e 87.53%
+);
+$supersoft-gradient: linear-gradient(
+  228.57deg,
+  #323264 11.93%,
+  #323264 57.17%,
+  #643e72 87.46%
+);
+$second-gradient: linear-gradient(323.35deg, #f0145a 6.7%, #693264 70.36%);
+$text-gradient: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+
+;
+
+
+$base-fs: 16px;
+$base-lh: 1.6;
+$base-ff: "Montserrat", sans-serif;
+$h1-size: 38px;
+$h2-size: 30px;
+$h3-size: 22px;
+$h3-size-caps: 14px;
+$h4-size: 16px;
+$link-color: #24a3ff;
+$link-hover-color: #f0145a;
