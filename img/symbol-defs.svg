@@ -1,0 +1,11 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-Close" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M7 7l18 18"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M25 7l-18 18"></path>
+</symbol>
+<symbol id="icon-Facebook-Header" viewBox="0 0 31 32">
+<path d="M30.72 16.094c0-8.535-6.877-15.454-15.36-15.454s-15.36 6.919-15.36 15.454c0 7.714 5.617 14.107 12.96 15.266v-10.799h-3.9v-4.467h3.9v-3.405c0-3.873 2.293-6.013 5.802-6.013 1.68 0 3.438 0.302 3.438 0.302v3.803h-1.937c-1.908 0-2.503 1.191-2.503 2.413v2.899h4.26l-0.681 4.467h-3.579v10.799c7.343-1.159 12.96-7.553 12.96-15.266z"></path>
+</symbol>
+</defs>
+</svg>
