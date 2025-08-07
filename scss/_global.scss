@@ -27,15 +27,6 @@ body {
   border-radius: 0 0 12px 12px;
   margin-bottom: 54px;
   padding-bottom: 60px;
-  & .services {
-    padding: 134px 0 60px;
-    @media screen and (min-width: 768px) {
-      padding-top: 280px;
-    }
-    @media screen and (min-width: 1024px) {
-      padding-top: 176px;
-    }
-  }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 84px;
@@ -88,5 +79,11 @@ body {
     &:hover {
       color: $accent-color;
     }
+  }
+}
+#services .services {
+  padding: 134px 0 60px;
+  @media screen and (min-width: 768px) {
+    padding-top: 150px;
   }
 }
